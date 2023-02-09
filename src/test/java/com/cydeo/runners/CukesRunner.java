@@ -8,8 +8,11 @@ import org.junit.runner.RunWith;
 
 @CucumberOptions(
 
-  features = "src/test/resources/features",
-  glue="com/cydeo/step_definitions"
+        features = "src/test/resources/features",
+        glue="com/cydeo/step_definitions",
+        dryRun = true
+
+
 )
 
 public class CukesRunner {
