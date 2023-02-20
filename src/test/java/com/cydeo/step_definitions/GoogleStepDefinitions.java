@@ -12,6 +12,16 @@ public class GoogleStepDefinitions {
 
     GoogleSearchPage googleSearchPage=new GoogleSearchPage();
 
+    @When("user enter {string} and clicks enter")
+    public void user_enter_and_clicks_enter(String string) {
+
+    }
+    @Then("user sees {string} in the google title")
+    public void user_sees_in_the_google_title(String string) {
+
+    }
+
+
     @When("user enter apple and clicks enter")
     public void user_enter_apple_and_clicks_enter() {
 googleSearchPage.searchBox.sendKeys("apple"+ Keys.ENTER);
