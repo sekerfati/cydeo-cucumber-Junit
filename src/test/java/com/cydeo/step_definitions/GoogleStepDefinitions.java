@@ -44,8 +44,8 @@ Assert.assertEquals("Title is not as expected!",expectedTitle, actualTitle);
     public void user_should_see_title_is_google() {
 String expectedTitle="Google";
 String actualTitle=Driver.getDriver().getTitle();
-  Assert.assertEquals(actualTitle, expectedTitle);
-  Driver.closeDriver();
+  Assert.assertEquals(expectedTitle,actualTitle);
+
     }
 
 
