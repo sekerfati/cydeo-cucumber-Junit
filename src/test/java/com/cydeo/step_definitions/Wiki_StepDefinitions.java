@@ -39,9 +39,17 @@ wikiSearchPage.searchBox.sendKeys(string);
     }
 
 
-
+    @Then("User sees {string} is in the main header")
+    public void userSeesSteveJobsIsInTheMainHeader(String string) {
+        Assert.assertTrue(wikiSearchPage.mainHeader.isDisplayed());
+        Assert.assertTrue(wikiSearchPage.mainHeader.getText().equals(string));
 
     }
+
+
+
+
+}
 
 
 
