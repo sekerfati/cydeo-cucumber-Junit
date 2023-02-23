@@ -1,17 +1,27 @@
 package com.cydeo.step_definitions;
 
+import com.cydeo.pages.WebTableLoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Order_stepDefinitions {
+
+    WebTableLoginPage webTableLoginPage= new WebTableLoginPage();
+    BasePage basePage=new BasePage();
+
     @Given("user is already logged in and on order page")
     public void user_is_already_logged_in_and_on_order_page() {
+  // calling our login method to login
+        webTableLoginPage.login();
+  // clicking to the "order" link to go to order page
+        basePage.order.click();
 
     }
 
     @When("user selects product type {string}")
     public void user_selects_product_type(String string) {
+
 
     }
 
