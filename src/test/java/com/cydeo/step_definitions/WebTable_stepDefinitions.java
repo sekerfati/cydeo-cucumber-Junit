@@ -56,9 +56,7 @@ webTableLoginPage.inputUserName.sendKeys(string);
     @When("user enters username {string} password {string} and logins")
     public void userEntersUsernamePasswordAndLogins(String username, String password) {
 
-webTableLoginPage.inputUserName.sendKeys(username);
-webTableLoginPage.inputPassWord.sendKeys(password);
-webTableLoginPage.loginButton.click();
+webTableLoginPage.login(username, password);
 
     }
 
