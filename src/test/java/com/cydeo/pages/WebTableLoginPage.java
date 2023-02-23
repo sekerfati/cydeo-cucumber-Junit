@@ -22,6 +22,36 @@ public class WebTableLoginPage {
   public   WebElement loginButton;
 
 
+    /**
+     * No parameters.
+     * When we call this method, it will directly login using
+     * Username:Test
+     * Password:Tester
+     *
+      */
+ public void login(){
+     this.inputUserName.sendKeys("Test");
+     this.inputPassWord.sendKeys("Tester");
+     this.loginButton.click();
+ }
+
+    /**
+     * This method() will accept 2 arguments, and it will login
+     * @param username
+     * @param password
+     */
+public void login(String username, String password){
+        this.inputUserName.sendKeys(username);
+        this.inputPassWord.sendKeys(password);
+        this.loginButton.click();
+    }
+
+
+
+
+
+
+
 }
 
 
