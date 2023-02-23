@@ -40,7 +40,7 @@ Feature: Wikipedia search functionality and verification
   # TC#4: Wikipedia Search Functionality Image Header Verification :
 
 
-  @wip
+
 Scenario: Wikipedia Search Functionality Image Header Verification
 Given User is on Wikipedia home page
 When  User types "Steve Jobs" in the wiki search box
