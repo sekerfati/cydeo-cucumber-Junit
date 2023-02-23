@@ -81,7 +81,13 @@ public class BrowserUtils {
 }
 
 
-public static List<String> dropDownOptionsAsString(WebElement dropDownElement){
+    /**
+     * This method will accept a dropDown as a WebElement
+     * and return all the options' text in a list of String
+     * @param dropDownElement
+     * @return List<String> actual options as String
+     */
+    public static List<String> dropDownOptionsAsString(WebElement dropDownElement){
 
     Select select= new Select(dropDownElement);
     //List of all actual dropDown options as web element.

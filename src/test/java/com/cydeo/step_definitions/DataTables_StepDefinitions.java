@@ -1,6 +1,7 @@
 package com.cydeo.step_definitions;
 
 import com.cydeo.pages.DropDownsPage;
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -36,19 +37,10 @@ DropDownsPage dropDownsPage=new DropDownsPage();
 
     @Then("User should see below info in month dropdown")
     public void user_should_see_below_info_in_month_dropdown(List<String> expectedMonth) {
+// this method will return us the list of String of given dropDown's Options
+        List<String> actualMonths = BrowserUtils.dropDownOptionsAsString(dropDownsPage.MonthDropDown);
 
-        Select select= new Select(dropDownsPage.MonthDropDown);
-        //List of all actual month options as web element.
-        List<WebElement> actualOptionsAsWebElement = select.getOptions();
-
-
-        //List of all actual month options as String.
-        List<String > actualOptionsAsString=new ArrayList<>();
-        for (WebElement each : actualOptionsAsWebElement) {
-          actualOptionsAsString.add(each.getText());
-        }
-
-        Assert.assertEquals(expectedMonth, actualOptionsAsString);
+        Assert.assertEquals(expectedMonth, actualMonths);
 // Assert will check the size of the list first. If it is matching it will check content 1 by 1.
 
 
