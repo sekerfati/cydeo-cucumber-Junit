@@ -34,3 +34,15 @@ Feature: Wikipedia search functionality and verification
       | Marie Curie       | Marie Curie       | Marie Curie        |
       | Lady Gaga         | Lady Gaga         | Lady Gaga          |
       | Kate Winslet      | Kate Winslet      | Kate Winslet       |
+
+
+     #-------------------------------------------------------------------------
+  # TC#4: Wikipedia Search Functionality Image Header Verification :
+
+
+  @wip
+Scenario: Wikipedia Search Functionality Image Header Verification
+Given User is on Wikipedia home page
+When  User types "Steve Jobs" in the wiki search box
+And User clicks wiki search button
+Then User sees "Steve Jobs" is in the image header

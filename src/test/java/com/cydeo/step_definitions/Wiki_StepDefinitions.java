@@ -47,6 +47,12 @@ wikiSearchPage.searchBox.sendKeys(string);
     }
 
 
+    @Then("User sees {string} is in the image header")
+    public void user_sees_is_in_the_image_header(String string) {
+      Assert.assertTrue(wikiSearchPage.image.isDisplayed());
+      Assert.assertTrue(wikiSearchPage.image.getText().equals(string));
+
+    }
 
 
 }
