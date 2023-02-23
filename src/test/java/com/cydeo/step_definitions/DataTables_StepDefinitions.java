@@ -38,8 +38,11 @@ DropDownsPage dropDownsPage=new DropDownsPage();
     public void user_should_see_below_info_in_month_dropdown(List<String> expectedMonth) {
 
         Select select= new Select(dropDownsPage.MonthDropDown);
+        //List of all actual month options as web element.
         List<WebElement> actualOptionsAsWebElement = select.getOptions();
-        
+
+
+        //List of all actual month options as String.
         List<String > actualOptionsAsString=new ArrayList<>();
         for (WebElement each : actualOptionsAsWebElement) {
           actualOptionsAsString.add(each.getText());
