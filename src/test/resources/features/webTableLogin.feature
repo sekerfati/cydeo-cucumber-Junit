@@ -17,7 +17,7 @@ Background: user is on the login page
     Then user should see url contains orders
 
 
-  @wip
+
   Scenario: User should be able to see all 12 months in months  dropdown
     When user enters below credentials
       | username | Test   |
