@@ -68,4 +68,18 @@ public class BrowserUtils {
     }
 
 
+
+
+ // verifies whether the current url contains    "expectedInUrl"
+public static void   verifyURLContains(String expectedInUrl){
+    Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains(expectedInUrl));
+
+}
+
+
+
+
+
+
+
 }
