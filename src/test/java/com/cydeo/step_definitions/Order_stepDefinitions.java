@@ -97,7 +97,7 @@ orderPage.inputCity.sendKeys(string);
 
     @When("user enters credit card number {string}")
     public void user_enters_credit_card_number(String string) {
-
+orderPage.cardNoInput.sendKeys(string);
 
 
     }
@@ -105,18 +105,22 @@ orderPage.inputCity.sendKeys(string);
 
     @When("user enters expiry date {string}")
     public void user_enters_expiry_date(String string) {
+orderPage.cardExpInput.sendKeys(string);
+
 
     }
 
 
     @When("user enters process order button")
     public void user_enters_process_order_button() {
+orderPage.processOrderButton.click();
 
     }
 
 
     @Then("user should see {string} in first row of the web table")
     public void user_should_see_in_first_row_of_the_web_table(String string) {
+
 
     }
 

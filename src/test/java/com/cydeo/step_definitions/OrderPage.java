@@ -37,13 +37,13 @@ public class OrderPage extends BasePage {
     public List<WebElement> cardType;
 
     @FindBy(name="cardNo")
-    public List<WebElement> cardNumber;
+    public WebElement cardNoInput;
 
  @FindBy(name="cardExp")
- public List<WebElement> cardExpInput;
+ public WebElement cardExpInput;
 
  @FindBy(css="button[type='submit']")
- public List<WebElement> processOrderButton;
+ public WebElement processOrderButton;
 
 
 
