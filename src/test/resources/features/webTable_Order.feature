@@ -22,7 +22,7 @@ Feature:Web table user order feature
   Scenario Template: User should be able to place order and order seen in the web table
     Given user is already logged in and on order page
     When user selects product type "<productType>"
-    And user enters quantity "<quantity>"
+    And user enters quantity <quantity>
     And user enters customer name "<customerName>"
     And user enters street "<street>"
     And user enters city "<city>"
@@ -35,9 +35,20 @@ Feature:Web table user order feature
     Then user should see "<expectedName>" in first row of the web table
 
     Examples: Famous female scientists
-      | productType | quantity | customerName      | street     | city   | state   | zipcode | cardType | cardNumber       | expDate | expectedName      |
-      | MoneyCog    | 2        | Marie Curie       | London St. | London | England | 50505   | visa     | 1111222233334444 | 12/24   | Marie Curie       |
-      | FamilyBea   | 3        | Rosalind Franklin | London St. | London | England | 50505   | visa     | 1111222233334444 | 12/24   | Rosalind Franklin |
-      | MoneyCog    | 4        | List Meitner      | London St. | London | England | 50505   | visa     | 1111222233334444 | 12/24   | List Meitner      |
-      | MoneyCog    | 5        | Chein-Shein  wu   | London St. | London | England | 50505   | visa     | 1111222233334444 | 12/24   | Chein-Shein  wu   |
-      | MoneyCog    | 6        | Barbara Mclin     | London St. | London | England | 50505   | visa     | 1111222233334444 | 12/24   | Barbara Mclin     |
+      | productType | quantity | customerName       | street     | city   | state   | zipcode | cardType | cardNumber       | expDate | expectedName       |
+      | MoneyCog    | 2        | Marie Curie        | London St. | London | England | 50505   | visa     | 1111222233334444 | 12/24   | Marie Curie        |
+      | Familybea   | 3        | Rosalind Franklin  | London St. | London | England | 50505   | visa     | 1111222233334444 | 12/24   | Rosalind Franklin  |
+      | Screenable  | 4        | List Meitner       | London St. | London | England | 50505   | visa     | 1111222233334444 | 12/24   | List Meitner       |
+      | MoneyCog    | 5        | Chein-Shiun Wu     | London St. | London | England | 50505   | visa     | 1111222233334444 | 12/24   | Chein-Shiun Wu     |
+      | MoneyCog    | 6        | Barbara McClintock | London St. | London | England | 50505   | visa     | 1111222233334444 | 12/24   | Barbara McClintock |
+
+
+
+    Examples: Famous male scientists
+      | productType | quantity | customerName    | street     | city   | state   | zipcode | cardType | cardNumber       | expDate | expectedName    |
+      | MoneyCog    | 2        | Charles Darwin  | London St. | London | England | 50505   | visa     | 1111222233334444 | 12/24   | Charles Darwin  |
+      | Familybea   | 3        | Albert Einstein | London St. | London | England | 50505   | visa     | 1111222233334444 | 12/24   | Albert Einstein |
+      | Screenable  | 4        | Cv Raman        | London St. | London | England | 50505   | visa     | 1111222233334444 | 12/24   | Cv Raman        |
+      | MoneyCog    | 5        | Galileo         | London St. | London | England | 50505   | visa     | 1111222233334444 | 12/24   | Galileo         |
+      | MoneyCog    | 6        | Isac Newton     | London St. | London | England | 50505   | visa     | 1111222233334444 | 12/24   | Isac Newton     |
+      | MoneyCog    | 6        | Arnot Ben       | London St. | London | England | 50505   | visa     | 1111222233334444 | 12/24   | Arnot Ben       |
