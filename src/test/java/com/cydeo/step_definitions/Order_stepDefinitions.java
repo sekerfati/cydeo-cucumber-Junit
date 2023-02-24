@@ -1,6 +1,7 @@
 package com.cydeo.step_definitions;
 
 import com.cydeo.pages.WebTableLoginPage;
+import com.cydeo.utilities.BrowserUtils;
 import com.cydeo.utilities.ConfigurationReader;
 import com.cydeo.utilities.Driver;
 import io.cucumber.java.en.And;
@@ -8,7 +9,10 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 public class Order_stepDefinitions {
 
@@ -80,17 +84,21 @@ orderPage.inputCity.sendKeys(string);
     @When("user enters zipcode {string}")
     public void user_enters_zipcode(String string) {
 
+        orderPage.inputZip.sendKeys(string);
     }
 
 
     @When("user selects credit card type {string}")
-    public void user_selects_credit_card_type(String string) {
-
+    public void user_selects_credit_card_type(String expectedCardType) {
+// this line will loop through the list and decide which radio button to click
+      BrowserUtils.clickRadioButtonWithString(orderPage.cardType, expectedCardType);
     }
 
 
     @When("user enters credit card number {string}")
     public void user_enters_credit_card_number(String string) {
+
+
 
     }
 
