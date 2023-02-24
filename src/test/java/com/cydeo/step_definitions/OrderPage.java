@@ -13,7 +13,23 @@ public class OrderPage extends BasePage {
    @FindBy(name = "product")
     public WebElement productDropDown;
 
+    @FindBy(name = "quantity")
+    public WebElement inputQuantity;
 
+    @FindBy(name = "name")
+    public WebElement inputCustomerName;
+
+    @FindBy(name = "street")
+    public WebElement inputStreet;
+
+    @FindBy(name = "city")
+    public WebElement inputCity;
+
+    @FindBy(name = "state")
+    public WebElement inputState;
+
+    @FindBy(name = "zip")
+    public WebElement inputZip;
 
 
 
