@@ -12,19 +12,19 @@ In this class we will be able to pas pre&post conditions to each scenario
  */
 public class Hooks {
  // import from io.cucumber.java not from Junit
-  @Before(order = 1)
+ // @Before(order = 1)
     public void  setupScenario(){
 
       System.out.println("=======Setting up browser using cucumber @Before=========");
   }
 
-    @Before(value = "@login", order = 2)
+ //   @Before(value = "@login", order = 2)
     public void  setupScenarioForLogins(){
 
         System.out.println("=======this will only apply for scenarios with @login tag=========");
     }
 
-    @Before(value = "@database", order = 0)
+ //   @Before(value = "@database", order = 0)
     public void  setupScenarioForDatabaseScenarios(){
 
         System.out.println("=======this will only apply for scenarios with @database tag=========");
@@ -51,12 +51,12 @@ public class Hooks {
 
 
 
-@BeforeStep
+//@BeforeStep
     public void setupStep(){
     System.out.println("------------applying setup using @BeforeStep----------- ");
 }
 
-@AfterStep
+//@AfterStep
     public void tearDownStep(){
     System.out.println("------------applying tearDown using @AfterStep----------- ");
 }
